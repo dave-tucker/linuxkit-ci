@@ -46,6 +46,11 @@ services:
       # The location of the local repositories to monitor.
       - './local/linuxkit:/linuxkit-src'
       - './local/linuxkit-ci:/linuxkit-ci-src'
+  registry:
+    restart: always
+    image: 'registry:2.6.1'
+    ports:
+      - '5000:5000'
 
 secrets:
   gcp-key.json:

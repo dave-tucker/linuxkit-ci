@@ -43,6 +43,11 @@ services:
   redis:
     command: redis-server --save 60 1
     image: 'redis:latest'
+  registry:
+    restart: always
+    image: 'registry:2.6.1'
+    ports:
+      - '5000:5000'
 
 volumes:
   ci-secrets:
