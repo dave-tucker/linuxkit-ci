@@ -4,3 +4,7 @@ local
 *~
 *.install
 *.pyc
+*.img*
+*-kernel
+*-cmdline
+*-state
